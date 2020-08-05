@@ -46,3 +46,17 @@ from itertools import permutations
 s,n = input().split()
 print(*[''.join(i) for i in permutations(sorted(s),int(n))],sep='\n')
 
+
+# You are given a string .
+# Your task is to print all possible combinations, up to size , of the string in lexicographic sorted order.
+
+# Input Format
+
+# A single line containing the string  and integer value  separated by a space.
+
+from itertools import combinations
+s,n = input().split()
+
+for d in range(1,int(n)+1):
+ print(*[''.join(i) for i in combinations(sorted(s),d)],sep='\n')
+
