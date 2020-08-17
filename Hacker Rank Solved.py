@@ -60,3 +60,11 @@ s,n = input().split()
 for d in range(1,int(n)+1):
  print(*[''.join(i) for i in combinations(sorted(s),d)],sep='\n')
 
+
+# Mr. Vincent works in a door mat manufacturing company. One day, he designed a new door mat with the following specifications:
+# DOOR MAT PATTENRN
+# Mat size must be X. ( is an odd natural number, and  is  times .)
+
+n, m = map(int,input().split())
+pattern = [('.|.'*(2*i + 1)).center(m, '-') for i in range(n//2)]
+print('\n'.join(pattern + ['WELCOME'.center(m, '-')] + pattern[::-1]))
